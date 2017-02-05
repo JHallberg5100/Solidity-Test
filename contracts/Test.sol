@@ -97,5 +97,45 @@ contract Test{
     }
   }
 
+  function returnCardNumber(uint personId) constant returns (uint totalCards){
+    Person p = Clients[personId];
+    if (p.clientAddress == msg.sender || owner == msg.sender){
+      totalCards = p.numCreditCards;
+    }
+    else{
+      totalCards = 0;
+    }
+  }
 
+  function returnCardName(uint personId, uint cardNum) constant returns (string bankName){
+    Person p = Clients[personId];
+    if (p.clientAddress == msg.sender || owner == msg.sender){
+      CreditCard c = p.Cards[cardNum];
+      bankName = c.bankName;
+    }
+    else{
+      bankName = "Invalid query";
+    }
+  }
+
+  function returnLoginNumber(uint personId) constant returns (uint totalLogins){
+    Person p = Clients[personId];
+    if (p.clientAddress == msg.sender || owner == msg.sender){
+      totalLogins = p.numLogins;
+    }
+    else{
+      totalLogins = 0;
+    }
+  }
+
+  function returnLoginName(uint personId, uint LoginNum) constant returns (string siteName){
+    Person p = Clients[personId];
+    if (p.clientAddress == msg.sender || owner == msg.sender){
+      LoginInformation c = p.Logins[LoginNum];
+      siteName = c.websiteName;
+    }
+    else{
+      siteName = "Invalid query";
+    }
+  }
 }

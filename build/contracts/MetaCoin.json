@@ -177,12 +177,12 @@
         }
       },
       "links": {
-        "ConvertLib": "0x9d3839bd5dc0650d4f79e01d2f29e22d9325ebe0"
+        "ConvertLib": "0x614ac19bd61f5e37f653d67e5281068796eb1730"
       },
-      "address": "0x4c96c75713677c5ccf1317565770a7499e3313b6",
-      "updated_at": 1486323620937
+      "address": "0x6dfce44fa779809d428b66e1a337813b738e6e0d",
+      "updated_at": 1486325320227
     }
   },
   "schema_version": "0.0.5",
-  "updated_at": 1486323620937
+  "updated_at": 1486325320227
 }
